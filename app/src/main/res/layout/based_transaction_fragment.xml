@@ -4,487 +4,499 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/top_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_line"
-        android:background="@color/light_gold"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="마이닝턴 Transaction"/>
-
-                <EditText
-                    android:id="@+id/edit_mining_transaction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="12"
-                    android:theme="@style/AppTheme"
-                    android:inputType="number"
-                    android:hint="0 원"/>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/black_10"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="리필턴 Transaction"/>
-
-                <EditText
-                    android:id="@+id/edit_refill_transaction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="12"
-                    android:theme="@style/AppTheme"
-                    android:inputType="number"
-                    android:hint="0 원"/>
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:id="@+id/line2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black_10"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/result_container"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/top_container"
-        android:layout_above="@+id/result_btn_container"
-        android:orientation="vertical">
+        android:layout_above="@+id/result_btn_container">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <!-- Mining Turn -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center_horizontal"
+                android:layout_below="@+id/view_line"
+                android:background="@color/light_gold"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp"
-                    android:text="마이닝 턴"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/black_10"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="수수료 발생"
+                            android:gravity="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:text="마이닝턴 Transaction"/>
 
-                        <TextView
+                        <EditText
+                            android:id="@+id/edit_mining_transaction"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="거래소 배당"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="유저 배당"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="유저 환급"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:maxLength="12"
+                            android:theme="@style/AppTheme"
+                            android:inputType="number"
+                            android:hint="0 원"/>
 
                     </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_10"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/result_mining_commission"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/rectangle_no_color"
+                            android:gravity="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            android:textSize="15dp"
+                            android:text="리필턴 Transaction"/>
 
-                        <TextView
-                            android:id="@+id/result_mining_trader_commission"
-                            android:layout_width="match_parent"
+                        <EditText
+                            android:id="@+id/edit_refill_transaction"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
-
-                        <TextView
-                            android:id="@+id/result_mining_user_commission"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
-
-                        <TextView
-                            android:id="@+id/result_mining_user_bft"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
-
-                        <TextView
-                            android:id="@+id/result_mining_user_btc"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:maxLength="12"
+                            android:theme="@style/AppTheme"
+                            android:inputType="number"
+                            android:hint="0 원"/>
 
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/black_10"/>
-
-            <!-- Refill Turn -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="@color/black"
-                    android:textSize="17dp"
-                    android:text="리필 턴"/>
 
                 <View
+                    android:id="@+id/line2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/black_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_container"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Mining Turn -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:text="마이닝 턴"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black_10"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="수수료 발생"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="거래소 배당"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="유저 배당"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="유저 환급"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/result_mining_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_mining_trader_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_mining_user_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_mining_user_bft"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_mining_user_btc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/black_10"/>
+
+                    <!-- Refill Turn -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:text="리필 턴"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black_10"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="수수료 발생"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="거래소 배당"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="유저 배당"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="BFT 구매"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/result_refill_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_refill_trader_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_refill_user_commission"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+
+                                <TextView
+                                    android:id="@+id/result_refill_bft_buy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/rectangle_no_color"
+                                    android:textColor="@color/black"
+                                    android:textSize="15dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
+                    android:background="@color/black_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="- TOTAL -"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="수수료 발생"
+                            android:gravity="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:text="거래소 배당금"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:text="거래소 배당"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="유저 배당"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/result_trader_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:text="103949"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="BFT 구매"
-                            android:textColor="@color/black"
-                            android:textSize="15dp" />
-
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/result_trader_revenue"
+                                android:layout_alignParentBottom="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:text="원"/>
+                        </RelativeLayout>
                     </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_10"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/result_refill_commission"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/rectangle_no_color"
+                            android:gravity="center"
                             android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            android:textSize="15dp"
+                            android:text="유저 배당금"/>
 
-                        <TextView
-                            android:id="@+id/result_refill_trader_commission"
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/result_refill_user_commission"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            <TextView
+                                android:id="@+id/result_user_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:text="103949"/>
 
-                        <TextView
-                            android:id="@+id/result_refill_bft_buy"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/rectangle_no_color"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/result_user_revenue"
+                                android:layout_alignParentBottom="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:text="원"/>
+                        </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/black_10"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="17dp"
-            android:text="- TOTAL -"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="거래소 배당금"/>
-
-                <RelativeLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                    android:layout_height="1dp"
+                    android:background="@color/black"/>
 
-                    <TextView
-                        android:id="@+id/result_trader_revenue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-                        android:text="103949"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/result_trader_revenue"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:text="원"/>
-                </RelativeLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/black_10"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="유저 배당금"/>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <TextView
-                        android:id="@+id/result_user_revenue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-                        android:text="103949"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/result_user_revenue"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:text="원"/>
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"/>
-
-    </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:id="@+id/result_btn_container"

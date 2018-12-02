@@ -1,13 +1,21 @@
 package com.example.woonho.osnbit.fragment
 
+import android.annotation.TargetApi
 import android.app.Fragment
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.util.TypedValue
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
 import android.widget.TextView
+import com.example.woonho.bitflowsimulator.PreferenceConstants
+import com.example.woonho.bitflowsimulator.PreferenceHelper
 import com.example.woonho.bitflowsimulator.R
 import com.example.woonho.bitflowsimulator.fragment.BasedTransactionFragment
 
@@ -22,6 +30,10 @@ class MainTabFragment : Fragment() {
         }
     }
 
+    private lateinit var editUserCommission: EditText
+    private lateinit var editUserCount: EditText
+
+    // Tab
     private lateinit var btnBasedTurn: TextView
     private lateinit var btnBasedTransaction: TextView
 
@@ -33,6 +45,7 @@ class MainTabFragment : Fragment() {
         initView(view)
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
     private fun initView(v: View) {
 
         val fm = fragmentManager
@@ -62,6 +75,24 @@ class MainTabFragment : Fragment() {
             ft.commit()
         }
 
+        editUserCommission = v.findViewById(R.id.edit_user_commission)
+        editUserCommission.setText(
+                PreferenceHelper.getInstance(context).getLongExtra(PreferenceConstants.USER_DIVIDEND).toString())
+
+//        editUserCommission.setOnEditorActionListener(TextView.OnEditorActionListener { texView, id, keyEvent ->
+//            if (id == EditorInfo.IME_ACTION_DONE /*||
+//                    keyEvent.action == KeyEvent.KEYCODE_ENTER*/) {
+//
+//                Log.d(TAG, "woonho user dividend = " + texView.text)
+//
+////                PreferenceHelper.getInstance(context).putLongExtra(PreferenceConstants.USER_DIVIDEND, texView.text as Long)
+//                return@OnEditorActionListener true
+//            }
+//            false
+//        })
+
+
+        editUserCount = v.findViewById(R.id.edit_user_count)
 
     }
 

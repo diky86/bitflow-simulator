@@ -59,17 +59,30 @@
                     android:textSize="15dp"
                     android:text="유저 배당"/>
 
-                <EditText
-                    android:id="@+id/edit_user_commission"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="5"
-                    android:theme="@style/AppTheme"
-                    android:inputType="numberDecimal"
-                    android:hint="0 %"/>
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/edit_user_commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:theme="@style/AppTheme"
+                        android:inputType="numberDecimal"
+                        android:hint="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:text="%"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <View
@@ -94,17 +107,30 @@
                     android:textSize="15dp"
                     android:text="거래소 배당"/>
 
-                <EditText
-                    android:id="@+id/edit_trader_commission"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="5"
-                    android:theme="@style/AppTheme"
-                    android:inputType="numberDecimal"
-                    android:hint="0 %"/>
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/edit_trader_commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:theme="@style/AppTheme"
+                        android:inputType="numberDecimal"
+                        android:hint="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:text="%"/>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -139,17 +165,30 @@
                     android:textSize="15dp"
                     android:text="수수료"/>
 
-                <EditText
-                    android:id="@+id/edit_commission"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="5"
-                    android:theme="@style/AppTheme"
-                    android:inputType="numberDecimal"
-                    android:hint="0 %"/>
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/edit_commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:theme="@style/AppTheme"
+                        android:inputType="numberDecimal"
+                        android:hint="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:text="%"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <View
@@ -174,17 +213,30 @@
                     android:textSize="15dp"
                     android:text="BTC"/>
 
-                <EditText
-                    android:id="@+id/edit_btc_commission"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="5"
-                    android:theme="@style/AppTheme"
-                    android:inputType="numberDecimal"
-                    android:hint="0 %"/>
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/edit_btc_commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:theme="@style/AppTheme"
+                        android:inputType="numberDecimal"
+                        android:hint="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:text="%"/>
+
+                </LinearLayout>
             </LinearLayout>
 
             <View
@@ -209,17 +261,30 @@
                     android:textSize="15dp"
                     android:text="유저"/>
 
-                <EditText
-                    android:id="@+id/edit_user_count"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:maxLength="12"
-                    android:theme="@style/AppTheme"
-                    android:inputType="number"
-                    android:hint="0 명"/>
+                    android:orientation="horizontal">
 
+                    <EditText
+                        android:id="@+id/edit_user_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:theme="@style/AppTheme"
+                        android:inputType="number"
+                        android:hint="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:text="명"/>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
@@ -244,7 +309,7 @@
                 android:layout_marginBottom="10dp"
                 android:textSize="15dp"
                 android:textColor="@color/black"
-                android:text="등급 별 유저 비율"/>
+                android:text="등급 별 유저 비율 (%)"/>
 
             <!-- -->
             <LinearLayout
@@ -268,6 +333,7 @@
                         android:textSize="15dp"
                         android:text="1등급"/>
 
+
                     <EditText
                         android:id="@+id/edit_grade_1"
                         android:layout_width="match_parent"
@@ -275,10 +341,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -305,10 +371,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -335,10 +401,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -365,10 +431,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -395,10 +461,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -425,10 +491,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -461,10 +527,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -491,10 +557,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -521,10 +587,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -551,10 +617,10 @@
                         android:background="@drawable/rectangle_grade"
                         android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:maxLength="4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:hint="____"/>
 
                 </LinearLayout>
 
@@ -579,12 +645,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/rectangle_grade"
-                        android:padding="5dp"
                         android:gravity="center"
-                        android:maxLength="3"
+                        android:hint="____"
                         android:inputType="numberDecimal"
-                        android:textSize="14dp"
-                        android:hint="___%"/>
+                        android:maxLength="4"
+                        android:padding="5dp"
+                        android:textSize="14dp" />
 
                 </LinearLayout>
 
@@ -593,28 +659,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginLeft="15dp"
-                    android:orientation="vertical"
-                    android:visibility="invisible">
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/rectangle_grade"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:gravity="center"
                         android:textColor="@color/black_50"
                         android:textSize="15dp"
-                        android:text="6등급"/>
+                        android:text="@string/setting_complete"/>
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rectangle_grade"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:maxLength="3"
-                        android:inputType="numberDecimal"
-                        android:textSize="14dp"
-                        android:hint="___%"/>
 
                 </LinearLayout>
             </LinearLayout>

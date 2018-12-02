@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BitFlowSimulator</string>
+    <string name="setting_complete">설정\n완료</string>
 </resources>
