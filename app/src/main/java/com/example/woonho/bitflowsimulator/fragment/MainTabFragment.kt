@@ -5,6 +5,7 @@ import android.app.Fragment
 import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.util.TypedValue
 import android.view.KeyEvent
@@ -31,7 +32,10 @@ class MainTabFragment : Fragment() {
     }
 
     private lateinit var editUserCommission: EditText
+    private lateinit var editTraderCommission: EditText
     private lateinit var editUserCount: EditText
+    private lateinit var editCommission: EditText
+    private lateinit var btnSetting: View
 
     // Tab
     private lateinit var btnBasedTurn: TextView
@@ -79,6 +83,16 @@ class MainTabFragment : Fragment() {
         editUserCommission.setText(
                 PreferenceHelper.getInstance(context).getLongExtra(PreferenceConstants.USER_DIVIDEND).toString())
 
+        editTraderCommission = v.findViewById(R.id.edit_trader_commission)
+        editTraderCommission.setText(
+                PreferenceHelper.getInstance(context).getLongExtra(PreferenceConstants.EXCHANGE_DIVIDEND).toString())
+
+        editCommission = v.findViewById(R.id.edit_commission)
+        editCommission.setText(
+                PreferenceHelper.getInstance(context).getLongExtra(PreferenceConstants.TRADE_COMMISSION).toString()
+        )
+
+
 //        editUserCommission.setOnEditorActionListener(TextView.OnEditorActionListener { texView, id, keyEvent ->
 //            if (id == EditorInfo.IME_ACTION_DONE /*||
 //                    keyEvent.action == KeyEvent.KEYCODE_ENTER*/) {
@@ -93,6 +107,17 @@ class MainTabFragment : Fragment() {
 
 
         editUserCount = v.findViewById(R.id.edit_user_count)
+
+        btnSetting = v.findViewById(R.id.btn_setting)
+        btnSetting.setOnClickListener {
+            if (!TextUtils.isEmpty(editUserCommission.text)) {
+
+//                PreferenceHelper.getInstance(context).putLongExtra(PreferenceConstants.USER_DIVIDEND, )
+            }
+        }
+    }
+
+    private fun saveSettingValue() {
 
     }
 
