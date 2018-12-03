@@ -197,6 +197,9 @@
                                     android:id="@+id/result_mining_commission"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
                                     android:textSize="15dp"/>
@@ -205,6 +208,9 @@
                                     android:id="@+id/result_mining_trader_commission"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:layout_marginTop="10dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
@@ -214,10 +220,13 @@
                                     android:id="@+id/result_mining_user_commission"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:layout_marginTop="10dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/result_mining_user_bft"
@@ -332,15 +341,21 @@
                                     android:id="@+id/result_refill_commission"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/result_refill_trader_commission"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
                                     android:textSize="15dp"/>
@@ -350,6 +365,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
                                     android:textSize="15dp"/>
@@ -359,6 +377,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingLeft="5dp"
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
                                     android:textSize="15dp"/>

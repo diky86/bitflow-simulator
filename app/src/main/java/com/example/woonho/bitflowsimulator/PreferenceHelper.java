@@ -45,13 +45,13 @@ public class PreferenceHelper {
         return prefs.getString(key, "");
     }
 
-    public void putLongExtra(String key, long value) {
-        editor.putLong(key, value);
+    public void putFloatExtra(String key, float value) {
+        editor.putFloat(key, value);
         editor.commit();
     }
 
-    public long getLongExtra(String key) {
-        return prefs.getLong(key, 0);
+    public float getFloatExtra(String key) {
+        return prefs.getFloat(key, 0.0f);
     }
 
     public void putBooleanExtra(String key, boolean value) {
