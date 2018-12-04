@@ -174,14 +174,6 @@
                                     android:textColor="@color/black"
                                     android:textSize="15dp" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="유저 환급"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp" />
-
                             </LinearLayout>
 
                             <LinearLayout
@@ -227,25 +219,6 @@
                                     android:background="@drawable/rectangle_no_color"
                                     android:textColor="@color/black"
                                     android:textSize="15dp" />
-
-                                <TextView
-                                    android:id="@+id/result_mining_user_bft"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/rectangle_no_color"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp"/>
-
-                                <TextView
-                                    android:id="@+id/result_mining_user_btc"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/rectangle_no_color"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp"/>
-
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>

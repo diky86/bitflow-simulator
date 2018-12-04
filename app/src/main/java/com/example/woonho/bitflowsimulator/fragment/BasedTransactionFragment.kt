@@ -51,12 +51,7 @@ class BasedTransactionFragment : Fragment() {
     private fun initView(v: View) {
 
         miningTurnTransaction = v.findViewById(R.id.edit_mining_transaction)
-//        miningTurnTransaction.setText(
-//                PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.MINING_TURN_TRANSACTION).toString())
-
         refillTurnTransaction = v.findViewById(R.id.edit_refill_transaction)
-//        refillTurnTransaction.setText(
-//                PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.REFILL_TURN_TRANSACTION).toString())
 
         resultCommission = v.findViewById(R.id.result_mining_commission)
         resultExchangeCommission = v.findViewById(R.id.result_mining_trader_commission)

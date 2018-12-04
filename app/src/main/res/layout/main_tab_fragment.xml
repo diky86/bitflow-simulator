@@ -307,9 +307,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textSize="15dp"
+                android:text="등급 별 BFT 구매 비율 (%)"
                 android:textColor="@color/black"
-                android:text="등급 별 유저 비율 (%)"/>
+                android:textSize="15dp" />
 
             <!-- -->
             <LinearLayout
@@ -657,7 +657,7 @@
                 <LinearLayout
                     android:id="@+id/btn_setting"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginLeft="15dp"
                     android:layout_gravity="center_vertical"
@@ -666,12 +666,11 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:textColor="@color/black_50"
                         android:textSize="15dp"
                         android:text="@string/setting_complete"/>
-
 
                 </LinearLayout>
             </LinearLayout>

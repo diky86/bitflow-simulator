@@ -15,6 +15,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.example.woonho.bitflowsimulator.PreferenceConstants
 import com.example.woonho.bitflowsimulator.PreferenceHelper
 import com.example.woonho.bitflowsimulator.R
@@ -175,6 +176,7 @@ class MainTabFragment : Fragment() {
         btnSetting = v.findViewById(R.id.btn_setting)
         btnSetting.setOnClickListener {
             saveSettingValue()
+            Toast.makeText(context, "설정되었습니다.", Toast.LENGTH_LONG)
         }
     }
 
@@ -212,6 +214,7 @@ class MainTabFragment : Fragment() {
         // 등급
         if (!TextUtils.isEmpty(editGrade1.text)) {
             val grade1 = editGrade1.text.toString()
+            Log.d(TAG, "woonho grade111 = " + grade1)
             PreferenceHelper.getInstance(context).putFloatExtra(PreferenceConstants.USER_1GRADE_PERCENT, grade1.toFloat())
         }
         if (!TextUtils.isEmpty(editGrade2.text)) {
