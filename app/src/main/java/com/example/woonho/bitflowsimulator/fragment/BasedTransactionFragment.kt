@@ -71,9 +71,9 @@ class BasedTransactionFragment : Fragment() {
     @TargetApi(Build.VERSION_CODES.M)
     private fun computeAndSetResult() {
 
+        val compute = CalculatorUtils(context)
         if (!TextUtils.isEmpty(miningTurnTransaction.text)) {
             val miningTurnTransaction = miningTurnTransaction.text.toString()
-            val compute = CalculatorUtils(context)
             val commission = compute.computeMiningTurnCommission(miningTurnTransaction.toFloat())
             resultCommission.text = commission.toString()
 
@@ -86,7 +86,6 @@ class BasedTransactionFragment : Fragment() {
 
         if (!TextUtils.isEmpty(refillTurnTransaction.text)) {
             val refillTurnTransaction = refillTurnTransaction.text.toString()
-            val compute = CalculatorUtils(context)
             val commission = compute.computeMiningTurnCommission(refillTurnTransaction.toFloat())
             resultRefillCommission.text = commission.toString()
 
@@ -99,7 +98,5 @@ class BasedTransactionFragment : Fragment() {
             val buyingBFT = compute.computeRefillTurnBFTBuying(commission)
             resultBFTBuying.text = buyingBFT.toString()
         }
-
     }
-
 }

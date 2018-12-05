@@ -43,11 +43,9 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -56,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:text="유저 배당"/>
 
                 <LinearLayout
@@ -91,11 +89,9 @@
                 android:background="@color/black_10"/>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -104,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:text="거래소 배당"/>
 
                 <LinearLayout
@@ -132,28 +128,16 @@
 
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <View
-            android:id="@+id/line1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black_10"/>
-
-        <LinearLayout
-            android:id="@+id/commission_user_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black_10"/>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -162,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
+                    android:textSize="12dp"
                     android:text="수수료"/>
 
                 <LinearLayout
@@ -197,11 +181,9 @@
                 android:background="@color/black_10"/>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -210,8 +192,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="BTC"/>
+                    android:textSize="12dp"
+                    android:text="BFT 가격"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -219,7 +201,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/edit_btc_commission"
+                        android:id="@+id/edit_bft_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="15dp"
@@ -234,62 +216,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:textSize="15dp"
-                        android:text="%"/>
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/black_10"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:text="유저"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/edit_user_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:gravity="center"
-                        android:maxLength="12"
-                        android:theme="@style/AppTheme"
-                        android:inputType="number"
-                        android:hint="0"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="15dp"
-                        android:text="명"/>
+                        android:text="원"/>
 
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <View
-            android:id="@+id/line2"
+            android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black_10"/>

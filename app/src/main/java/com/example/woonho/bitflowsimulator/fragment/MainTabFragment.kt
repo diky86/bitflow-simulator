@@ -8,11 +8,9 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.util.TypedValue
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -35,8 +33,7 @@ class MainTabFragment : Fragment() {
     private lateinit var editUserCommission: EditText
     private lateinit var editTraderCommission: EditText
     private lateinit var editCommission: EditText
-    private lateinit var editBtcCommission: EditText
-    private lateinit var editUserCount: EditText
+    private lateinit var editBFTPrice: EditText
 
     private lateinit var editGrade1: EditText
     private lateinit var editGrade2: EditText
@@ -107,14 +104,9 @@ class MainTabFragment : Fragment() {
                 PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.TRADE_COMMISSION).toString()
         )
 
-        editBtcCommission = v.findViewById(R.id.edit_btc_commission)
-        editBtcCommission.setText(
-                PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.BTC_SEND_COMMISSION).toString()
-        )
-
-        editUserCount = v.findViewById(R.id.edit_user_count)
-        editUserCount.setText(
-                PreferenceHelper.getInstance(context).getIntExtra(PreferenceConstants.USER_COUNT).toString()
+        editBFTPrice = v.findViewById(R.id.edit_bft_price)
+        editBFTPrice.setText(
+                PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.BFT_PRICE).toString()
         )
 
         editGrade1 = v.findViewById(R.id.edit_grade_1)
@@ -180,6 +172,7 @@ class MainTabFragment : Fragment() {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
     private fun saveSettingValue() {
         // 유저 배당
         if (!TextUtils.isEmpty(editUserCommission.text)) {
@@ -199,16 +192,10 @@ class MainTabFragment : Fragment() {
             PreferenceHelper.getInstance(context).putFloatExtra(PreferenceConstants.TRADE_COMMISSION, commisiion.toFloat())
         }
 
-        // BTC
-        if (!TextUtils.isEmpty(editBtcCommission.text)) {
-            val btcCommission = editBtcCommission.text.toString()
-            PreferenceHelper.getInstance(context).putFloatExtra(PreferenceConstants.BTC_SEND_COMMISSION, btcCommission.toFloat())
-        }
-
-        // 유저
-        if (!TextUtils.isEmpty(editUserCount.text)) {
-            val userCount = editUserCount.text.toString()
-            PreferenceHelper.getInstance(context).putIntExtra(PreferenceConstants.USER_COUNT, userCount.toInt())
+        // BFT 가격
+        if (!TextUtils.isEmpty(editBFTPrice.text)) {
+            val bftPrice = editBFTPrice.text.toString()
+            PreferenceHelper.getInstance(context).putFloatExtra(PreferenceConstants.BFT_PRICE, bftPrice.toFloat())
         }
 
         // 등급

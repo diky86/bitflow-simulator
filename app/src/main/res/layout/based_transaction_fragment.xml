@@ -418,7 +418,7 @@
                                 android:textColor="@color/black"
                                 android:textStyle="bold"
                                 android:textSize="20dp"
-                                android:text="103949"/>
+                                android:text="-"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -468,7 +468,7 @@
                                 android:textColor="@color/black"
                                 android:textStyle="bold"
                                 android:textSize="20dp"
-                                android:text="103949"/>
+                                android:text="-"/>
 
                             <TextView
                                 android:layout_width="wrap_content"

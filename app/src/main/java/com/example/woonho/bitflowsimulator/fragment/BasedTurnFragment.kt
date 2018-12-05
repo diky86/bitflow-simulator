@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import com.example.woonho.bitflowsimulator.CalculatorUtils
+import com.example.woonho.bitflowsimulator.PreferenceConstants
+import com.example.woonho.bitflowsimulator.PreferenceHelper
 import com.example.woonho.bitflowsimulator.R
 
 class BasedTurnFragment : Fragment() {
@@ -24,9 +26,7 @@ class BasedTurnFragment : Fragment() {
         }
     }
 
-    private lateinit var editBFTPrice: EditText
     private lateinit var editBFTCount: EditText
-    private lateinit var editUserCount: EditText
     private lateinit var editTurnCount: EditText
 
     private lateinit var resultTradedPrice: TextView
@@ -47,9 +47,7 @@ class BasedTurnFragment : Fragment() {
 
     private fun initView(v: View) {
 
-        editBFTPrice = v.findViewById(R.id.edit_bft_price)
         editBFTCount = v.findViewById(R.id.edit_bft_count)
-        editUserCount = v.findViewById(R.id.edit_user_count)
         editTurnCount = v.findViewById(R.id.edit_turn_count)
 
         resultTradedPrice = v.findViewById(R.id.result_trade_price)
@@ -59,7 +57,6 @@ class BasedTurnFragment : Fragment() {
         resultUserRevenue = v.findViewById(R.id.result_user_revenue)
 
         btnCompute = v.findViewById(R.id.result_btn_container)
-
         btnCompute.setOnClickListener {
             computeAndSetResult()
         }
@@ -68,22 +65,25 @@ class BasedTurnFragment : Fragment() {
     @TargetApi(Build.VERSION_CODES.M)
     private fun computeAndSetResult() {
 
-        if (!TextUtils.isEmpty(editBFTPrice.text) &&
-                !TextUtils.isEmpty(editBFTCount.text)) {
-            val bftPrice = editBFTPrice.text.toString()
+        if (!TextUtils.isEmpty(editBFTCount.text)) {
+            val bftPrice = PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.BFT_PRICE)
             val bftCount = editBFTCount.text.toString()
             val compute = CalculatorUtils(context)
-            val tradedPrice = compute.computeTurnStandardTradePrice(bftPrice.toFloat(), bftCount.toFloat())
-            resultTradedPrice.text = tradedPrice.toString()
-
-            val tradedCommission = compute.computeTurnStandardTradedCommision(tradedPrice)
-            resultTradedCommission.text = tradedCommission.toString()
 
             if (!TextUtils.isEmpty(editTurnCount.text)) {
                 val turnCount = editTurnCount.text.toString()
+
+                val tradedPrice = compute.computeTurnStandardTradePrice(bftPrice, bftCount.toFloat()) * turnCount.toFloat()
+                resultTradedPrice.text = (tradedPrice * 2).toString()
+
+                val tradedCommission = compute.computeTurnStandardTradedCommision(tradedPrice) * turnCount.toFloat()
+                resultTradedCommission.text = (tradedCommission * 2).toString()
+
                 val exchangeRevenue = compute.computeTurnStandardExchangeRevenue(tradedCommission) * turnCount.toFloat()
                 resultExchangeRevenue.text = exchangeRevenue.toString()
 
+                val userRevenue = compute.computeTurnStandardUserRevenue(tradedCommission) * turnCount.toFloat()
+                resultUserRevenue.text = userRevenue.toString()
 
             }
         }

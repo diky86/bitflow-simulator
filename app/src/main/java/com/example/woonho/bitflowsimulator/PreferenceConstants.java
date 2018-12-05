@@ -5,8 +5,9 @@ public class PreferenceConstants {
     public static final String USER_DIVIDEND = "userDividend";
     public static final String EXCHANGE_DIVIDEND = "exchangeDividend";
     public static final String TRADE_COMMISSION = "tradeCommission";
-    public static final String BTC_SEND_COMMISSION = "btcSendCommission";
-    public static final String USER_COUNT = "userCount";
+//    public static final String BTC_SEND_COMMISSION = "btcSendCommission";
+    public static final String BFT_PRICE = "bftPrice";
+
     // User Grade
     public static final String USER_1GRADE_PERCENT = "user1GradePercent";
     public static final String USER_2GRADE_PERCENT = "user2GradePercent";
@@ -19,8 +20,5 @@ public class PreferenceConstants {
     public static final String USER_9GRADE_PERCENT = "user9GradePercent";
     public static final String USER_10GRADE_PERCENT = "user10GradePercent";
     public static final String USER_11GRADE_PERCENT = "user11GradePercent";
-
-    public static final String MINING_TURN_TRANSACTION = "miningTurnTransaction";
-    public static final String REFILL_TURN_TRANSACTION = "refillTurnTransaction";
 
 }
