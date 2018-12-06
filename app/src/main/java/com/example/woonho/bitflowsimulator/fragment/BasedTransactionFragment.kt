@@ -131,18 +131,19 @@ class BasedTransactionFragment : Fragment() {
 
         var miningTurnExchangeDividend = 0f
         var miningTurnUserDividend = 0f
+        val dcf = DecimalFormat("###,###.##")
 
         val compute = CalculatorUtils(context)
         if (!TextUtils.isEmpty(miningTurnTransaction.text)) {
             val miningTurnTransaction = miningTurnTransaction.text.toString()
             val commission = compute.computeMiningTurnCommission(miningTurnTransaction.toFloat())
-            resultCommission.text = commission.toString()
+            resultCommission.text = dcf.format(commission)
 
             miningTurnExchangeDividend = compute.computeMiningTurnExchangeDividend(commission)
-            resultExchangeCommission.text = miningTurnExchangeDividend.toString()
+            resultExchangeCommission.text = dcf.format(miningTurnExchangeDividend)
 
             miningTurnUserDividend = compute.computeMiningTurnUserDividend(commission)
-            resultUserCommission.text = miningTurnUserDividend.toString()
+            resultUserCommission.text = dcf.format(miningTurnUserDividend)
         }
 
         var refillTurnExchangeDividend = 0f
@@ -151,19 +152,18 @@ class BasedTransactionFragment : Fragment() {
         if (!TextUtils.isEmpty(refillTurnTransaction.text)) {
             val refillTurnTransaction = refillTurnTransaction.text.toString()
             val commission = compute.computeMiningTurnCommission(refillTurnTransaction.toFloat())
-            resultRefillCommission.text = commission.toString()
+            resultRefillCommission.text = dcf.format(commission)
 
             refillTurnExchangeDividend = compute.computeRefillTurnExchangeDividend(commission)
-            resultRefillExchangeCommission.text = refillTurnExchangeDividend.toString()
+            resultRefillExchangeCommission.text = dcf.format(refillTurnExchangeDividend)
 
             refillTurnUserDividend = compute.computeRefillTurnUserDividend(commission)
-            resultRefillUserCommission.text = refillTurnUserDividend.toString()
+            resultRefillUserCommission.text = dcf.format(refillTurnUserDividend)
 
             val buyingBFT = compute.computeRefillTurnBFTBuyingCount(refillTurnTransaction.toFloat())
-            resultBFTBuying.text = buyingBFT.toString()
+            resultBFTBuying.text = dcf.format(buyingBFT)
         }
 
-        val dcf = DecimalFormat("###,###.##")
         val totalResultExchange = dcf.format(miningTurnExchangeDividend + refillTurnExchangeDividend)
         val totalResultUser = dcf.format(miningTurnUserDividend + refillTurnUserDividend)
 

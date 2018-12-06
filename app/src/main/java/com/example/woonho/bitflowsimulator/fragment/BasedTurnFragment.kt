@@ -18,6 +18,7 @@ import com.example.woonho.bitflowsimulator.CalculatorUtils
 import com.example.woonho.bitflowsimulator.PreferenceConstants
 import com.example.woonho.bitflowsimulator.PreferenceHelper
 import com.example.woonho.bitflowsimulator.R
+import java.text.DecimalFormat
 
 class BasedTurnFragment : Fragment() {
     private val TAG = "BasedTurnFragment"
@@ -123,25 +124,24 @@ class BasedTurnFragment : Fragment() {
             val bftPrice = PreferenceHelper.getInstance(context).getFloatExtra(PreferenceConstants.BFT_PRICE)
             val bftCount = editBFTCount.text.toString()
             val compute = CalculatorUtils(context)
+            val dcf = DecimalFormat("###,###")
 
             if (!TextUtils.isEmpty(editTurnCount.text)) {
                 val turnCount = editTurnCount.text.toString()
 
                 val tradedPrice = compute.computeTurnStandardTradePrice(bftPrice, bftCount.toFloat()) * turnCount.toFloat()
-                resultTradedPrice.text = (tradedPrice * 2).toString()
+                resultTradedPrice.text = dcf.format(tradedPrice * 2)
 
                 val tradedCommission = compute.computeTurnStandardTradedCommision(tradedPrice) * turnCount.toFloat()
-                resultTradedCommission.text = (tradedCommission * 2).toString()
+                resultTradedCommission.text = dcf.format(tradedCommission * 2)
 
                 val exchangeRevenue = compute.computeTurnStandardExchangeRevenue(tradedCommission) * turnCount.toFloat()
-                resultExchangeRevenue.text = exchangeRevenue.toString()
+                resultExchangeRevenue.text = dcf.format(exchangeRevenue)
 
                 val userRevenue = compute.computeTurnStandardUserRevenue(tradedCommission) * turnCount.toFloat()
-                resultUserRevenue.text = userRevenue.toString()
+                resultUserRevenue.text = dcf.format(userRevenue)
 
             }
         }
-
-
     }
 }
