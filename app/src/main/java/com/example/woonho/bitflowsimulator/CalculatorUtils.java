@@ -67,8 +67,13 @@ public class CalculatorUtils {
         return (float) ((refillTurnCommission * 0.2) * (PreferenceHelper.getInstance(mContext).getFloatExtra(PreferenceConstants.USER_DIVIDEND) * 0.01));
     }
 
-    public float computeRefillTurnBFTBuying(float refillTurnCommission) {
-        return (float) (refillTurnCommission * 0.8);
+    /**
+     * 거래량 * 0.8 * (1 / BFT 가격)
+     * @param refillturnTransaction 리필턴 거래량
+     * @return 리필턴 BFT 구매 수량
+     */
+    public float computeRefillTurnBFTBuyingCount(float refillturnTransaction) {
+        return (float) ((refillturnTransaction * 0.8) * (1 / PreferenceHelper.getInstance(mContext).getFloatExtra(PreferenceConstants.BFT_PRICE)));
     }
 
     /**

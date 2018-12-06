@@ -43,7 +43,7 @@
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            android:text="마이닝턴 Transaction"/>
+                            android:text="마이닝턴 거래금액"/>
 
                         <EditText
                             android:id="@+id/edit_mining_transaction"
@@ -78,7 +78,7 @@
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            android:text="리필턴 Transaction"/>
+                            android:text="리필턴 거래금액"/>
 
                         <EditText
                             android:id="@+id/edit_refill_transaction"

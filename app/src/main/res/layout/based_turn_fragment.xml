@@ -54,6 +54,7 @@
                             android:gravity="center"
                             android:maxLength="9"
                             android:theme="@style/AppTheme"
+                            android:imeOptions="actionDone"
                             android:inputType="number"
                             android:hint="0 번"/>
 
@@ -89,6 +90,7 @@
                             android:gravity="center"
                             android:maxLength="9"
                             android:theme="@style/AppTheme"
+                            android:imeOptions="actionDone"
                             android:inputType="numberDecimal"
                             android:hint="0 개"/>
 

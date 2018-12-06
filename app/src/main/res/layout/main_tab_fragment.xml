@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/root_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -32,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_line"
+        android:focusableInTouchMode="true"
         android:background="@color/light_gold"
         android:orientation="vertical">
 
@@ -70,6 +72,7 @@
                         android:gravity="center"
                         android:maxLength="5"
                         android:theme="@style/AppTheme"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:hint="0"/>
 
@@ -116,6 +119,7 @@
                         android:gravity="center"
                         android:maxLength="5"
                         android:theme="@style/AppTheme"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:hint="0"/>
 
@@ -162,6 +166,7 @@
                         android:gravity="center"
                         android:maxLength="5"
                         android:theme="@style/AppTheme"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:hint="0"/>
 
@@ -208,6 +213,7 @@
                         android:gravity="center"
                         android:maxLength="5"
                         android:theme="@style/AppTheme"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:hint="0"/>
 
@@ -277,6 +283,7 @@
                         android:gravity="center"
                         android:maxLength="4"
                         android:inputType="numberDecimal"
+                        android:nextFocusDown="@+id/edit_grade_2"
                         android:textSize="14dp"
                         android:hint="____"/>
 
@@ -307,6 +314,7 @@
                         android:gravity="center"
                         android:maxLength="4"
                         android:inputType="numberDecimal"
+                        android:nextFocusDown="@+id/edit_grade_3"
                         android:textSize="14dp"
                         android:hint="____"/>
 
@@ -336,6 +344,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_4"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -366,6 +375,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_5"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -396,6 +406,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_6"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -426,6 +437,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_7"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -462,6 +474,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_8"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -492,6 +505,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_9"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -522,6 +536,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_10"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -552,6 +567,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:maxLength="4"
+                        android:nextFocusDown="@+id/edit_grade_11"
                         android:inputType="numberDecimal"
                         android:textSize="14dp"
                         android:hint="____"/>
@@ -582,6 +598,7 @@
                         android:gravity="center"
                         android:hint="____"
                         android:inputType="numberDecimal"
+                        android:imeOptions="actionDone"
                         android:maxLength="4"
                         android:padding="5dp"
                         android:textSize="14dp" />
